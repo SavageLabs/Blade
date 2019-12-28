@@ -1,10 +1,12 @@
-import { combineReducers } from 'redux';
-import meta from './meta'
-import sftp from './sftp'
-const reducers = combineReducers({
-    meta: meta.reducer,
-    sftp: sftp.reducer
-  });
-  
-  export default reducers;
-  
+import { combineReducers } from "redux";
+import status from "./status";
+import app from "./app"
+import targets from "./targets"
+import connections from "./connections";
+
+export default combineReducers({
+    status,
+    app,
+    targets,
+    connections
+})
